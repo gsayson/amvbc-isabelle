@@ -1,0 +1,51 @@
+# Isabelle/HOL build and temporary files
+**/*.aux
+**/*.bak
+**/*.bib.aux
+**/*.dvi
+**/*.log
+**/*.idx
+**/*.ind
+**/*.ilg
+**/*.out
+**/*.pdf
+**/*.ps
+**/*.toc
+**/*.blg
+**/*.bbl
+**/*.mlb
+**/*.sml
+**/*.thy.backup
+**/*.thy.diff
+**/*.thy.out
+**/*.thy.html
+**/*.thy.pdf
+**/*.thy.tex
+**/*.thy.toc
+**/*.thy.idx
+**/*.thy.log
+**/*.thy.blg
+**/*.thy.bbl
+**/*.thy.mlb
+**/*.thy.sml
+**/*.thy.trace
+**/*.thy.errors
+**/*.thy.warnings
+**/*.thy.session
+**/*.thy.session.json
+**/*.thy.session.xml
+
+# Isabelle session output directories
+*/session/
+*/output/
+*/browser_info/
+
+# Editor-specific temporary files (e.g., Emacs, Vim)
+*~
+.#*
+*.swp
+*.swo
+
+# OS-specific temporary files
+.DS_Store
+Thumbs.db
