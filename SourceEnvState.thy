@@ -4,9 +4,9 @@ begin
 
 type_synonym env = "vname \<Rightarrow> v option"
 
-record state =
+record source_state =
   input :: "char list"
-  "output" :: string
+  out :: string
   funs :: "dec list"
   clock :: nat
 
@@ -27,7 +27,7 @@ fun lookup_function :: "fname \<Rightarrow> dec list \<Rightarrow> dec option" w
   "lookup_function name (Defun f v e # fs) = (if f = name then (Some (Defun f v e)) else
   lookup_function name fs)"
 
-fun env_and_body :: "fname \<Rightarrow> v list \<Rightarrow> state \<Rightarrow> (env \<times> exp) option" where
+fun env_and_body :: "fname \<Rightarrow> v list \<Rightarrow> source_state \<Rightarrow> (env \<times> exp) option" where
   "env_and_body name args st = (case (lookup_function name (funs st)) of
   None \<Rightarrow> None | Some (Defun f params e) \<Rightarrow> Some (make_env params args empty_env, e))"
 
