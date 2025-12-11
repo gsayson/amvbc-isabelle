@@ -95,7 +95,7 @@ inductive tl_step :: "t_state_or_halt \<Rightarrow> t_state_or_halt \<Rightarrow
         \<rbrakk>
     \<Longrightarrow> tl_step (State s) (State (s \<lparr>pc := n\<rparr>))"
 | jmp_less: "\<lbrakk>
-          fetch_instr s = Jump (Equal r1 r2) n;
+          fetch_instr s = Jump (Less r1 r2) n;
           (regs s) r1 = Some v1;
           (regs s) r2 = Some v2;
           v1 < v2
